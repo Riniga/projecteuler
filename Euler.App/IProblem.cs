@@ -1,4 +1,4 @@
-﻿internal interface IProblem
+﻿public interface IProblem
 {
     public void Solve();
     public void DisplayResult();

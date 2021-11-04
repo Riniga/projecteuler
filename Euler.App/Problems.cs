@@ -13,6 +13,8 @@
             problems.Add(new Problem_6(100));
             problems.Add(new Problem_7(10001));
             problems.Add(new Problem_8(13));
+            problems.Add(new Problem_9(1000));
+            problems.Add(new Problem_10(2000000));
         }
 
         public IProblem GetProblem(int number)

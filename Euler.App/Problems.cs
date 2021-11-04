@@ -15,6 +15,8 @@
             problems.Add(new Problem_8(13));
             problems.Add(new Problem_9(1000));
             problems.Add(new Problem_10(2000000));
+            problems.Add(new Problem_11());
+            problems.Add(new Problem_12(500));
         }
 
         public IProblem GetProblem(int number)

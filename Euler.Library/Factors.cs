@@ -2,9 +2,9 @@
 {
     public class Factors
     {
-        public static List<int> GetFactorsFor(int number)
+        public static List<long> GetFactorsFor(long number)
         {
-            var factors = new List<int>();
+            var factors = new List<long>();
             if (number < 1) return factors;
             factors.Add(1);
             if (number == 1) return factors;
@@ -36,5 +36,7 @@
 
             return factors;
         }
+
+        
     }
 }

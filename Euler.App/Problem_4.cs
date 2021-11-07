@@ -1,14 +1,12 @@
 ﻿using Euler.Library;
 
-internal class Problem_4 : IProblem
+internal class Problem_4 : ProblemBase
 {
     private int result;
     private TimeSpan executionTime;
-    public Problem_4()
-    {
-    }
+    public Problem_4() { }
 
-    public void Solve()
+    public override void Solve()
     {
         DateTime start= DateTime.Now;
         var largest = 0;
@@ -22,7 +20,7 @@ internal class Problem_4 : IProblem
         executionTime = DateTime.Now - start;
     }
 
-    public void DisplayResult()
+    public override void DisplayResult()
     {
         Console.WriteLine("Problem 4 - Largest palindrome product");
         Console.WriteLine("A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers. ");

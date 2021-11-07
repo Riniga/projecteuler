@@ -4,7 +4,8 @@ internal class Problem_12 : ProblemBase
 {
     private long trianglenNumber=1;
     private int divisors;
-    
+
+    public Problem_12() : this(500) { }
     public Problem_12(int divisors)
     {
         this.divisors = divisors;

@@ -1,6 +1,6 @@
 ﻿using Euler.Library;
 
-internal class Problem_8 : IProblem
+internal class Problem_8 : ProblemBase
 {
     private long result;
     private TimeSpan executionTime;
@@ -25,13 +25,13 @@ internal class Problem_8 : IProblem
                             "84580156166097919133875499200524063689912560717606" +
                             "05886116467109405077541002256983155200055935729725" +
                             "71636269561882670428252483600823257530420752963450" ;
-
+    public Problem_8() : this(13) { }
     public Problem_8(int count)
     {
         this.count = count;
     }
 
-    public void Solve()
+    public override void Solve()
     {
         DateTime start= DateTime.Now;
         for (int i = 0; i < series.Length - count; i++)
@@ -43,7 +43,7 @@ internal class Problem_8 : IProblem
         executionTime = DateTime.Now - start;
     }
 
-    public void DisplayResult()
+    public override void DisplayResult()
     {
         Console.WriteLine("Problem 8 - Largest product in a series");
         Console.WriteLine("The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.");

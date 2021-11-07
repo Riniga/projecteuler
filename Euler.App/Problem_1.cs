@@ -1,17 +1,19 @@
 ﻿using Euler.Library;
 
-internal class Problem_1 : IProblem
+internal class Problem_1 : ProblemBase
 {
     private int result;
     private TimeSpan executionTime;
     private int max;
+
+    public Problem_1() : this(1000) {}
 
     public Problem_1(int max)
     {
         this.max = max;
     }
 
-    public void Solve()
+    public override void Solve()
     {
         DateTime start= DateTime.Now;
 
@@ -25,7 +27,7 @@ internal class Problem_1 : IProblem
         executionTime = DateTime.Now - start;
     }
 
-    public void DisplayResult()
+    public override void DisplayResult()
     {
         Console.WriteLine("Problem 1, Multiples of 3 and 5");
         Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.");

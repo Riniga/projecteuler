@@ -1,17 +1,17 @@
 ﻿using Euler.Library;
 
-internal class Problem_7 : IProblem
+internal class Problem_7 : ProblemBase
 {
     private int result;
     private TimeSpan executionTime;
     private int count;
-
+    public Problem_7() : this(10001) { }
     public Problem_7(int count)
     {
         this.count = count;
     }
 
-    public void Solve()
+    public override void Solve()
     {
         DateTime start= DateTime.Now;
         
@@ -21,7 +21,7 @@ internal class Problem_7 : IProblem
         executionTime = DateTime.Now - start;
     }
 
-    public void DisplayResult()
+    public override void DisplayResult()
     {
         Console.WriteLine("Problem 7 - 10001st prime");
         Console.WriteLine("By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.");

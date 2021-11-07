@@ -4,7 +4,8 @@ internal class Problem_10 : ProblemBase
 {
     private double result;
     private int number;
-    
+
+    public Problem_10() : this(2000000) { }
     public Problem_10(int number)
     {
         this.number = number;

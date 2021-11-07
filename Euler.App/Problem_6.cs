@@ -1,17 +1,17 @@
 ﻿using Euler.Library;
 
-internal class Problem_6 : IProblem
+internal class Problem_6 : ProblemBase
 {
     private int result;
     private TimeSpan executionTime;
     private int count;
-
+    public Problem_6() : this(100) { }
     public Problem_6(int count)
     {
         this.count = count;
     }
 
-    public void Solve()
+    public override void Solve()
     {
         DateTime start= DateTime.Now;
         int sumofsqueres = 0;
@@ -22,7 +22,7 @@ internal class Problem_6 : IProblem
         executionTime = DateTime.Now - start;
     }
 
-    public void DisplayResult()
+    public override void DisplayResult()
     {
         Console.WriteLine("Problem 6 - Sum square difference");
         Console.WriteLine("The sum of the squares of the first ten natural numbers is 385");

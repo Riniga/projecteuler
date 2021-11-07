@@ -5,7 +5,7 @@ internal class Problem_9 : ProblemBase
 {
     private int[] result = new int[3];
     private int number;
-    
+    public Problem_9() : this(1000) { }
     public Problem_9(int number)
     {
         this.number = number;

@@ -38,5 +38,33 @@
             } while (number > 0);
             return sum;
         }
+
+        public static string ToWords(this int number)
+        {
+            if (number < 0) return "Negative number not supported, yet";
+            else if (number < 20) return first[number];
+            else if (number < 100) return tenth[number / 10 - 2] + ((number % 10 == 0) ? "" : "-" + first[number % 10]);
+            else if (number < 1000)
+            {
+                string result = hundreds[number / 100 - 1] ;
+                int rest = number % 100;
+                if (rest > 0) result += " and "  + rest.ToWords();
+                return result;
+            }
+            else if (number < 10000)
+            {
+                string result = thousend[number / 1000 - 1];
+                int rest = number % 1000;
+                if (rest > 0) result += " and " + rest.ToWords();
+                return result;
+            }
+            else return "Too large";
+        }
+
+        private static string[] first = new string[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+        private static string[] tenth= new string[] { "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+        private static string[] hundreds = new string[] { "one hundred", "two hundred", "three hundred", "four hundred", "five hundred", "six hundred", "seven hundred", "eight hundred", "nine hundred" };
+        private static string[] thousend = new string[] { "one thousand", "two thousand", "three thousand", "four thousand", "five thousand", "six thousand", "seven thousand", "eight thousand", "nine thousand" };
+
     }
 }

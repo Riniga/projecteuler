@@ -19,7 +19,8 @@ namespace Euler.Library
         {
             string result = "";
             int rest = 0;
-            for (int i = 49; i >= 0; i--)
+            int length = numbers[0].Length-1;
+            for (int i = length; i >= 0; i--)
             {
                 int sum = rest;
                 foreach (var number in numbers) sum += number[i] - 48;

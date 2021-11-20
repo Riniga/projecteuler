@@ -20,14 +20,11 @@ namespace Euler.App
             }
         }
 
-        public ProblemBase GetProblem(int number)
-        { 
-            return problems[number-1];
-        }
-
         internal ProblemBase GetLastProblem()
         {
-            return GetProblem(problems.Count);
+            for (int i = problems.Count - 1; i >= 0; i--)
+                if (problems[i].enable == true) return problems[i];
+            return null;
         }
     }
 }

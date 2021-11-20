@@ -2,6 +2,7 @@
 public abstract class ProblemBase : IProblem
 {
     protected TimeSpan executionTime;
+    public bool enable=true;
     public string title;
     protected string description;
     protected string question;

@@ -23,5 +23,11 @@ public abstract class ProblemBase : IProblem
 
     public abstract void DisplayResult();
     public abstract void Solve();
+    public void CallSolve()
+    {
+        DateTime start = DateTime.Now;
+        Solve();
+        executionTime = DateTime.Now - start;
+    }
     
 }

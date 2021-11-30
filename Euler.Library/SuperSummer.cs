@@ -17,18 +17,35 @@ namespace Euler.Library
 
         public static string StringSummer(string[] numbers)
         {
+            var length = MaxLength(numbers);
+            PadNumbers(numbers, length);
+
             string result = "";
             int rest = 0;
-            int length = numbers[0].Length-1;
-            for (int i = length; i >= 0; i--)
+            for (int i = length-1; i >= 0; i--)
             {
                 int sum = rest;
                 foreach (var number in numbers) sum += number[i] - 48;
                 rest = sum / 10;
                 result = (sum % 10) + result;
             }
-            return rest + result;
+            return (rest + result).TrimStart('0');
         }
 
+        private static void PadNumbers(string[] numbers, int length)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = numbers[i].PadLeft(length, '0');
+            }
+        }
+
+        private static int MaxLength(string[] numbers)
+        {
+            int maxLength = 0;
+            foreach (var number in numbers)
+                if (number.Length > maxLength) maxLength=number.Length;
+            return maxLength;
+        }
     }
 }

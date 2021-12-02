@@ -5,6 +5,16 @@ namespace Euler.Library
 {
     public class SuperSummer
     {
+        public static long Sum(List<long> numbers)
+        {
+            var result = 0l;
+            foreach (var number in numbers)
+            {
+                result += number;
+            }
+            return result;
+        }
+
         public static int SumEven(List<int> numbers)
         {
             var result=0;

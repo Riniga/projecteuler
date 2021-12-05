@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Euler.Library\Euler.Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="p022_names.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

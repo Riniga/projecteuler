@@ -2,19 +2,23 @@
 using System;
 using System.Linq;
 
-internal class Problem_23 : ProblemBase
+internal class Problem_26 : ProblemBase
 {
     
     long result = 0;
-    public Problem_23()
+    
+    public Problem_26()
     {
-        title = "Problem 23 - ...";
-        description = "Using names.txt (right click and 'Save Link/Target As...'), a 46K text file containing over five-thousand first names, begin by sorting it into alphabetical order. Then working out the alphabetical value for each name, multiply this value by its alphabetical position in the list to obtain a name score.";
-        question = "What is the total of all the name scores in the file?";
+        
+        title = "Problem 26";
+        description = "A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given";
+        question = "Find the value of d<1000 for witch 1/d contain the longest recurring cycle in its decimal fraction part";
     }
     public override void Solve()
     {
-
+        
+        long current = (long)1/11;
+        result = current;
     }
     public override void DisplayResult()
     {

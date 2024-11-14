@@ -19,12 +19,17 @@ namespace Euler.App
                 }
             }
         }
-
+        internal ProblemBase GetProblem(int i)
+        {
+            if (problems[i-1].enable == true) return problems[i-1];
+            return null;
+        }
         internal ProblemBase GetLastProblem()
         {
             for (int i = problems.Count - 1; i >= 0; i--)
                 if (problems[i].enable == true) return problems[i];
             return null;
         }
+        
     }
 }
